@@ -1,0 +1,19 @@
+{
+  "name": "kidzie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SDTP-Team-1/Kidzie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SDTP-Team-1/Kidzie/issues"
+  },
+  "homepage": "https://github.com/SDTP-Team-1/Kidzie#readme"
+}
