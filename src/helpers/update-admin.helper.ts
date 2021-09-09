@@ -3,16 +3,19 @@ function updateAdminByID(id: any, columns: any) {
   var set: any = [];
   query.push("SET");
 
-  columns["first_name"] = columns["firstName"];
-  columns["last_name"] = columns["lastName"];
-  columns["phone_number"] = columns["phoneNumber"];
+  if (columns["firstName"]) {
+    columns["first_name"] = columns["firstName"];
+  }
+  if (columns["lastName"]) {
+    columns["last_name"] = columns["lastName"];
+  }
+  if (columns["phoneNumber"]) {
+    columns["phone_number"] = columns["phoneNumber"];
+  }
 
   delete columns["firstName"];
   delete columns["lastName"];
   delete columns["phoneNumber"];
-  delete columns["username"];
-  delete columns["email"];
-
   Object.keys(columns).forEach(function (key, i) {
     set.push(key + " = ($" + (i + 1) + ")");
   });

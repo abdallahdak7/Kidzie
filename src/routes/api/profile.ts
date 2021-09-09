@@ -22,7 +22,8 @@ router.put(
   body("firstName").isString().optional(),
   body("lastName").isString().optional(),
   body("country").isString().optional(),
-  body("phoneNumber").isString().withMessage("Invalid phone number"),
+  body("username").isString().optional(),
+  body("phoneNumber").isString().withMessage("Invalid phone number").optional(),
   async (req: any, res: any) => {
     try {
       const errors = validationResult(req);
@@ -37,7 +38,6 @@ router.put(
       const columnValues = Object.keys(req.body).map(function (key) {
         return req.body[key];
       });
-
       const data = await pool.query(query, columnValues);
       res.status(200).json(data.rows[0]);
     } catch (error) {
