@@ -1,5 +1,5 @@
-function updateAdminByID(id: any, columns: any) {
-  var query = ["UPDATE admins"];
+function updatePartnerByID(id: any, columns: any) {
+  var query = ["UPDATE partners"];
   var set: any = [];
   query.push("SET");
 
@@ -20,9 +20,9 @@ function updateAdminByID(id: any, columns: any) {
     set.push(key + " = ($" + (i + 1) + ")");
   });
   query.push(set.join(", "));
-  query.push(`WHERE admin_id = ${id} RETURNING *`);
+  query.push(`WHERE partner_id = ${id} RETURNING *`);
 
   return query.join(" ");
 }
 
-module.exports = updateAdminByID;
+module.exports = updatePartnerByID;

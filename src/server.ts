@@ -13,6 +13,7 @@ server.use(bodyParser.json());
 //routes
 server.use("/api", require("./routes/api/auth"));
 server.use("/api", require("./routes/api/profile"));
+server.use("/api", require("./routes/api/products"));
 
 server.listen(port, () => {
   return console.log(`server is listening on ${port}`);
