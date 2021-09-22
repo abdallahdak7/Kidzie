@@ -14,6 +14,7 @@ server.use(bodyParser.json());
 server.use("/api", require("./routes/api/auth"));
 server.use("/api", require("./routes/api/profile"));
 server.use("/api", require("./routes/api/products"));
+server.use("/api", require("./routes/api/promo-codes"));
 
 server.listen(port, () => {
   return console.log(`server is listening on ${port}`);

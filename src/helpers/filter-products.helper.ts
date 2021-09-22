@@ -32,7 +32,6 @@ function filterProducts(columns: any) {
     }
   });
   query.push(set.join(" "));
-  // query.push(`RETURNING *`);
 
   return query.join(" ");
 }

@@ -76,7 +76,7 @@ router.post(
   }
 );
 
-//GET PRODUCT BY PARTNER ID
+//GET PRODUCTS BY PARTNER ID
 router.get("/products/:id", async (req: any, res: any) => {
   try {
     const data = await pool.query(
